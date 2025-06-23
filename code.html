@@ -11,7 +11,7 @@
 
   <div class="galerie">
     <!-- Logement 1 -->
-    <div class="logement" onclick="ouvrirModal('img/logement1.jpg', 'Studio – UGB Saint-Louis', `📍 Localisation : Campus Social UGB, Saint-Louis<br>💰 Prix : 75 000 FCFA / mois<br>👤 Capacité : 1 personne<br>📐 Surface : 20 m²<br><br><strong>Description :</strong><br>- Studio calme avec kitchenette, douche privative, bureau<br>- Internet inclus, sécurité 24h/24, proche bibliothèque`)">
+    <div class="logement" onclick="ouvrirModal(['img/logement1.jpg', 'img/logement1_chambre.jpg', 'img/logement1_salon.jpg'], 'Studio – UGB Saint-Louis', `📍 Localisation : Campus Social UGB, Saint-Louis<br>💰 Prix : 75 000 FCFA / mois<br>👤 Capacité : 1 personne<br>📐 Surface : 20 m²<br><br><strong>Description :</strong><br>- Studio calme avec kitchenette, douche privative, bureau<br>- Internet inclus, sécurité 24h/24, proche bibliothèque`)">
       <img src="img/logement1.jpg" alt="UGB Studio">
       <div class="infos">Studio - UGB<br>75 000 FCFA</div>
     </div>
@@ -162,17 +162,33 @@
  
   </div>
 
-   <!-- ========== MODALE ========== -->
+   <!-- =================== MODALE DÉTAILLÉE =================== -->
 <div id="modal" class="modal">
   <div class="modal-content">
     <span class="close-btn" onclick="fermerModal()">&times;</span>
+
+    <!-- Image principale -->
     <img id="modalImg" src="" alt="Image logement">
+
+    <!-- Boutons navigation -->
+  <div style="text-align:center; margin-top:15px;">
+    <button onclick="precedentImage()">⬅ Précédent</button>
+    <button onclick="suivantImage()">Suivant ➡</button>
+  </div>
+
+    <!-- Détails -->
     <div class="details">
       <h2 id="modalTitre"></h2>
       <p id="modalTexte"></p>
     </div>
+
+    <!-- Bouton valider -->
+   <div style="text-align:center; margin-top:15px;">
+     <button onclick="validerChoix()">✅ Je choisis ce logement</button>
+   </div>
   </div>
 </div>
+
 
   <script src="monScript.js"></script>
   
